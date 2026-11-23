@@ -4,8 +4,8 @@
 // no server, no session storage. Demo mode (?demo=1) simulates everything.
 const AGENT_ID = "0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F";
 // Set by the owner right after deploying the contract (see deploy.html).
-const CONTRACT_ADDRESS = "0x0000000000000000000000000000000000000000";
-const DEPLOY_BLOCK = 0;
+const CONTRACT_ADDRESS = "0x1f258b07b6c0b2a0656764383923d08590de14a4";
+const DEPLOY_BLOCK = 135282970;
 const CHAIN_ID = 56;
 const RPCS = [
   "https://bsc-rpc.publicnode.com",
