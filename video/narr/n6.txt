@@ -1,0 +1,1 @@
+AgentTrail — leave your agent's trail on-chain. Try it live and read the code at github dot com slash nmhl21 slash agenttrail. Built for the Binance Agent ID Hackathon.

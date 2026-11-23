@@ -1,0 +1,1 @@
+Deploying takes one click from your own wallet — about 463,000 gas, a few cents. No server, no keys leave your wallet, and the contract has no admin functions at all.

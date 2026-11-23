@@ -1,0 +1,1 @@
+Every day, Agent ID holders check in once and write what their agent did — a note of up to 140 characters, published as a public on-chain event. This recording uses the built-in demo mode, which simulates the check-in locally; the live app sends a real transaction.

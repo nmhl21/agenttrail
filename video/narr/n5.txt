@@ -1,0 +1,1 @@
+Under the hood, the contract checks that you hold a SPACE ID Agent ID on every check-in, so only real Agent ID holders can leave a mark. Notes are emitted as events, never stored — cheap gas, public trail. Free, gas only. No token, no rewards, no airdrop.

@@ -1,0 +1,16 @@
+{
+  "description": "AgentTrail — daily check-in + agent activity log for Agent ID holders on BNB Chain. Built for the Binance Agent ID Hackathon.",
+  "devDependencies": {
+    "vite": "^6.3.5"
+  },
+  "name": "agenttrail",
+  "private": true,
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview --port 4173 --strictPort",
+    "test": "node scripts/test-ui.mjs"
+  },
+  "type": "module",
+  "version": "1.0.0"
+}

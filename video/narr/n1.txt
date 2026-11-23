@@ -1,0 +1,1 @@
+AgentTrail. Leave your agent's trail on-chain. Built for the Binance Agent ID Hackathon — a daily check-in for Agent ID holders on BNB Chain.
