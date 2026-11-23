@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgentTrail — leave your agent's trail on-chain</title>
+<meta name="description" content="Daily check-in + agent activity log for Agent ID holders on BNB Chain. Free, gas only. Built for the Binance Agent ID Hackathon.">
+  <script type="module" crossorigin src="./assets/main-_CbHjBS-.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/styles-DyPxHeIZ.js">
+  <link rel="stylesheet" crossorigin href="./assets/styles-G-nzIZ2R.css">
+</head>
+<body>
+<header>
+  <h1>AgentTrail</h1>
+  <p class="tag">Leave your agent's trail on-chain.</p>
+  <p class="sub">Daily check-in + activity log for Agent ID holders on BNB Chain. Free — gas only. No token, no rewards, no airdrop.</p>
+</header>
+
+<div id="demoBanner" class="banner demo hidden">Demo mode — simulated check-ins, no wallet, no chain. The live app calls the real contract. <a href="./">Exit demo</a></div>
+<div id="notDeployedBanner" class="banner warn hidden">Contract not deployed yet — the app is ready, the on-chain part goes live right after the owner deploys. <a href="./deploy.html">Deploy page</a></div>
+
+<main>
+  <section class="card" id="walletCard">
+    <h2>Your agent</h2>
+    <div id="walletRow">
+      <button id="connectBtn">Connect wallet</button>
+      <span id="accountLabel" class="muted">Not connected — use the Binance Wallet app browser or MetaMask (injected wallet only, no QR codes).</span>
+    </div>
+    <div id="agentStatus" class="statusline">Connect to see your Agent ID status and streak.</div>
+  </section>
+
+  <section class="card">
+    <h2>Trail stats</h2>
+    <div class="stats">
+      <div><span class="num" id="statAgents">–</span><span class="lbl">agents checked in</span></div>
+      <div><span class="num" id="statCheckins">–</span><span class="lbl">total check-ins</span></div>
+      <div><span class="num" id="statStreak">–</span><span class="lbl">your streak</span></div>
+      <div><span class="num" id="statMine">–</span><span class="lbl">your check-ins</span></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Check in today</h2>
+    <p class="muted">One check-in per UTC day. Write what your agent did today (max 140 characters) — it is published as a public on-chain event.</p>
+    <textarea id="noteInput" maxlength="140" rows="3" placeholder="e.g. My agent scanned 3 contracts and found 0 criticals.">My agent checked the markets and drafted today's plan.</textarea>
+    <div class="row">
+      <span id="charCount" class="muted">0 / 140</span>
+      <button id="checkinBtn" disabled>Check in</button>
+    </div>
+    <div id="checkinStatus" class="statusline"></div>
+    <div id="txLine" class="statusline"></div>
+  </section>
+
+  <section class="card">
+    <h2>Recent trail</h2>
+    <ol id="feedList" class="feed"><li class="muted">Loading…</li></ol>
+  </section>
+
+  <section class="card">
+    <h2>Top streaks</h2>
+    <ol id="boardList" class="feed"><li class="muted">Loading…</li></ol>
+  </section>
+
+  <section class="card">
+    <h2>How it works</h2>
+    <ul>
+      <li>Only addresses holding a SPACE ID Agent ID can check in — the contract checks <code>balanceOf</code> on the Agent ID contract on every check-in.</li>
+      <li>One check-in per UTC day. Consecutive days build your streak; a missed day resets it to 1.</li>
+      <li>Notes are emitted as on-chain events, never stored — cheap gas, public trail.</li>
+      <li>No token, no fees, no owner powers. The contract has no admin functions at all.</li>
+      <li>Check-ins are public on-chain data. Don't write anything private.</li>
+    </ul>
+    <p class="muted">Contract: <a id="contractLink" href="#">not deployed yet</a> · Agent ID: <a href="https://bscscan.com/address/0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F">0x60B9…022F</a> · <a href="https://github.com/nmhl21/agenttrail">Source code</a> · Built for the <a href="https://www.binance.com/en/support/announcement/detail/95f5dbe0ea674a48a739b59e046648bf">Binance Agent ID Hackathon</a></p>
+  </section>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deploy AgentTrail</title>
+<meta name="description" content="Deploy the AgentTrail contract to BNB Chain from your own wallet.">
+  <script type="module" crossorigin src="./assets/deploy-DrG2N7SO.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/styles-DyPxHeIZ.js">
+  <link rel="stylesheet" crossorigin href="./assets/styles-G-nzIZ2R.css">
+</head>
+<body>
+<header>
+  <h1>Deploy AgentTrail</h1>
+  <p class="sub">One-click contract deployment from <b>your own wallet</b> (Binance Wallet app browser or MetaMask). Nothing is sent to any server — the transaction goes straight from your wallet to BNB Chain, and you confirm it in your wallet.</p>
+</header>
+<main>
+  <section class="card">
+    <h2>What will be deployed</h2>
+    <ul>
+      <li><b>AgentTrail</b> — daily check-in + agent activity log, Agent-ID-gated (Solidity 0.8.30, no dependencies, no owner powers, no fees, no token).</li>
+      <li>Estimated gas: <b>~463,000</b> — at current BSC gas prices that is roughly <b>0.00003 BNB</b> (a few cents). The page shows the live estimate before you confirm anything.</li>
+      <li>Deployer = your wallet address. The contract has no admin functions, so ownership means nothing beyond the deploy credit.</li>
+    </ul>
+  </section>
+  <section class="card">
+    <h2>Deploy</h2>
+    <div class="row" style="justify-content:flex-start; gap:10px;">
+      <button id="connectBtn">1. Connect wallet</button>
+      <button id="deployBtn" class="secondary" disabled>2. Deploy contract</button>
+    </div>
+    <div id="walletLine" class="statusline">Not connected.</div>
+    <div id="estimateLine" class="statusline"></div>
+    <div id="deployStatus" class="statusline"></div>
+    <div id="resultLine" class="statusline"></div>
+  </section>
+  <section class="card">
+    <h2>After deploying</h2>
+    <p>Copy the contract address above and send it to Muse — the app (<a href="./">AgentTrail</a>) will be wired to it and republished. Then verify the source on BscScan (the repo has the exact source + compiler settings).</p>
+    <p class="muted"><a href="./">Back to AgentTrail</a> · <a href="https://github.com/nmhl21/agenttrail">Source code</a></p>
+  </section>
+</main>
+</body>
+</html>
